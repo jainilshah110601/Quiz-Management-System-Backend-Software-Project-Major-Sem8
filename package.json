@@ -19,7 +19,10 @@
     "connect-mongo": "^3.2.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.18.2",
+    "node_modules/express": {
+      "version": "4.18.1",
+      "resolved": "<https://registry.npmjs.org/express/-/express-4.18.1.tgz>",
+      "integrity": "sha512-zZBcOX9TfehHQhtupq57OF8lFZ3UZi08Y97dwFCkD8p9d/d2Y3M+ykKcwaMDEL+4qyUolgBDX6AblpR3fL212Q=="},
     "express-jwt": "^8.4.1",
     "express-session": "^1.17.1",
     "jsonwebtoken": "^9.0.0",
