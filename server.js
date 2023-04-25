@@ -1,19 +1,19 @@
-const express = require('express')
+import express, { urlencoded, json } from 'express'
 const app = express()
-var cors = require('cors')
+import cors from 'cors'
 // var bodyParser = require('body-parser')
 const PORT = process.env.PORT || 3000
 
 
 // all routes
-var apiRoutes = require('./routes/api')
-var teacherRoutes = require('./routes/teacher')
-var studentRoutes = require('./routes/student')
-var adminRoutes = require('./routes/admin')
+import apiRoutes from './routes/api'
+import teacherRoutes from './routes/teacher'
+import studentRoutes from './routes/student'
+import adminRoutes from './routes/admin'
 
 // some dependency
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(urlencoded({ extended: true }));
+app.use(json());
 
 app.use(cors())
 
@@ -27,7 +27,7 @@ app.use(cors())
 // app.options('*', cors())
 
 //database connection
-const db = require('./database/db');
+import db from './database/db'
 db()
 // app.use(function (req, res, next) {
 // res.header("Access-Control-Allow-Headers", "*")
